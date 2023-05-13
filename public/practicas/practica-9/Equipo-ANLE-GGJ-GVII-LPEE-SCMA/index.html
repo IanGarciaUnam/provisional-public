@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Redes de Computadoras">
+        <link rel="canonical" href="https://Redes-Ciencias-UNAM.gitlab.io/2023-2/tareas-redes/practicas/practica-9/Equipo-ANLE-GGJ-GVII-LPEE-SCMA/">
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Equipo-ANLE-GGJ-GVII-LPEE-SCMA - Redes - Tareas 2023-2</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../../css/extra.css" rel="stylesheet">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-CYE5VJNLW4"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-CYE5VJNLW4');
+        </script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Redes - Tareas 2023-2</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../.." class="nav-link">Inicio</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Practicas <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Practica 9</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Equipo ANLE GGJ GVII LPEE SCMA</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="./" class="dropdown-item active">Equipo-ANLE-GGJ-GVII-LPEE-SCMA</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a rel="prev" href="../../.." class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Anterior
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Siguiente <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://gitlab.com/Redes-Ciencias-UNAM/2023-2/tareas-redes/-/tree/entregados/docs/practicas/practica-9/Equipo-ANLE-GGJ-GVII-LPEE-SCMA/README.md" class="nav-link">Editar en tareas-redes
+                                    </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Tabla de contenidos">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#equipo-anle-ggj-gvii-lpee-scma" class="nav-link">Equipo-ANLE-GGJ-GVII-LPEE-SCMA</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#instalacion-y-configuracion-de-apache-httpd" class="nav-link">Instalación y configuración de Apache HTTPD</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="3"><a href="#instalacion-de-apache-httpd" class="nav-link">Instalación de Apache HTTPD</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#configuracion-de-servername" class="nav-link">Configuración de ServerName</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#pagina-de-indice-para-el-virtualhost-predeterminado" class="nav-link">Página de índice para el VirtualHost predeterminado</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#configuracion-de-seguridad-para-apache-httpd" class="nav-link">Configuración de seguridad para Apache HTTPD</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#verifica-la-configuracion" class="nav-link">Verifica la configuración</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#tramite-del-certificado-ssl-desde-otro-equipo-con-certbot" class="nav-link">Trámite del certificado SSL desde otro equipo con certbot</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="3"><a href="#habilita-el-modulo-y-virtualhost-de-ssl" class="nav-link">Habilita el módulo y VirtualHost de SSL</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#configura-los-virtualhosts-predeterminados" class="nav-link">Configura los VirtualHosts predeterminados</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#tramita-el-certificado-ssl-con-lets-encrypt" class="nav-link">Tramita el certificado SSL con Let's Encrypt</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#valida-el-servidor-y-dominio-dns-con-acme" class="nav-link">Valida el servidor y dominio DNS con ACME</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#redirige-el-trafico-http-a-https" class="nav-link">Redirige el tráfico HTTP a HTTPS</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="equipo-anle-ggj-gvii-lpee-scma">Equipo-ANLE-GGJ-GVII-LPEE-SCMA<a class="headerlink" href="#equipo-anle-ggj-gvii-lpee-scma" title="Permanent link">#</a></h1>
+<p><a href="https://redes-ciencias-unam.gitlab.io/laboratorio/practica-9/">Practica-9</a></p>
+<ul>
+<li>Nombre: Altamirano Niño Luis Enrique</li>
+<li>Número de cuenta: <code>315324972</code></li>
+<li>Usuario de GitLab: <code>@quiquealt</code></li>
+<li>Nombre: García Gómez Jazmín</li>
+<li>Número de cuenta: <code>315137714</code></li>
+<li>Usuario de GitLab: <code>@JazminGG</code></li>
+<li>Nombre: García Vázquez Ian Israel</li>
+<li>Número de cuenta: <code>317097364</code></li>
+<li>Usuario de GitLab: <code>@IanGarcia</code></li>
+<li>Nombre: Luna Piña Erick Eduardo</li>
+<li>Número de cuenta: <code>315017670</code></li>
+<li>Usuario de GitLab: <code>@elunapi</code></li>
+<li>Nombre: Sánchez Claudio Mayra Alejandra</li>
+<li>Número de cuenta: <code>308129755</code></li>
+<li>Usuario de GitLab: <code>@MayraSC</code></li>
+</ul>
+<h2 id="instalacion-y-configuracion-de-apache-httpd">Instalación y configuración de Apache HTTPD<a class="headerlink" href="#instalacion-y-configuracion-de-apache-httpd" title="Permanent link">#</a></h2>
+<h3 id="instalacion-de-apache-httpd">Instalación de Apache HTTPD<a class="headerlink" href="#instalacion-de-apache-httpd" title="Permanent link">#</a></h3>
+<p>Se aplican los comandos</p>
+<pre><code class="language-bash">apt -qy update
+apt -qy install apache2
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center">Instalado Apache2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="img1" src="img/1.jpeg" /></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-bash">netstat -ntulp | grep apache2
+apachectl -S
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="img1" src="img/status.jpeg" /></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="center">Revisado que se escuche en puerto 80</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="img2" src="img/2.jpeg" /></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="center">Revisado que se escuche en puerto 80</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="img3" src="img/3.jpeg" /></td>
+</tr>
+</tbody>
+</table>
+<h3 id="configuracion-de-servername">Configuración de ServerName<a class="headerlink" href="#configuracion-de-servername" title="Permanent link">#</a></h3>
+<p>Se aplican los comandos</p>
+<pre><code class="language-bash">a2enconf servername
+apachectl -t
+systemctl reload apache2
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center">Configurado serverName</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="img4" src="img/4.jpeg" /></td>
+</tr>
+</tbody>
+</table>
+<h3 id="pagina-de-indice-para-el-virtualhost-predeterminado">Página de índice para el VirtualHost predeterminado<a class="headerlink" href="#pagina-de-indice-para-el-virtualhost-predeterminado" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th align="center">Prueba con iangarcia.me &amp; www.iangarcia.me</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="img5" src="img/5.jpeg" /></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="center">Prueba con ip= 74.235.56.161</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="img6" src="img/6.jpeg" /></td>
+</tr>
+</tbody>
+</table>
+<h3 id="configuracion-de-seguridad-para-apache-httpd">Configuración de seguridad para Apache HTTPD<a class="headerlink" href="#configuracion-de-seguridad-para-apache-httpd" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th align="center">Cambio de directivas básicas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="img7" src="img/7.jpeg" /></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-bash">&lt;DirectoryMatch &quot;/\.git&quot;&gt;
+   Require all denied
+&lt;/DirectoryMatch&gt;
+</code></pre>
+<p>Se establece el acceso para los directorios que sean extensiones de git, lo cual denegará el acceso a todos los usuarios, lo que nos sirve para evitar que algún usuario de manera intencional o no obtenga acceso a algún archivo de configuración o con dtos sensibles de nuestro sistema de versiones.</p>
+<p>Se aplican los comandos</p>
+<pre><code class="language-bash">a2enconf security
+apachectl -t
+systemctl reload apache2
+apachectl -S
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center">Cambio de directivas básicas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="img8" src="img/8.jpeg" /></td>
+</tr>
+</tbody>
+</table>
+<h3 id="verifica-la-configuracion">Verifica la configuración<a class="headerlink" href="#verifica-la-configuracion" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th align="center">Revisión de configuración despues de reboot</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="img9" src="img/9.jpeg" /></td>
+</tr>
+</tbody>
+</table>
+<h2 id="tramite-del-certificado-ssl-desde-otro-equipo-con-certbot">Trámite del certificado SSL desde otro equipo con certbot<a class="headerlink" href="#tramite-del-certificado-ssl-desde-otro-equipo-con-certbot" title="Permanent link">#</a></h2>
+<h3 id="habilita-el-modulo-y-virtualhost-de-ssl">Habilita el módulo y VirtualHost de SSL<a class="headerlink" href="#habilita-el-modulo-y-virtualhost-de-ssl" title="Permanent link">#</a></h3>
+<pre><code class="language-bash">a2enmod ssl
+a2ensite default-ssl
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center">Comandos aplicados</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="img10" src="img/10.jpeg" /></td>
+</tr>
+</tbody>
+</table>
+<p>Se verifica que la configuración sea correcta y se reinicia el servicio de Apache HTTPD</p>
+<table>
+<thead>
+<tr>
+<th align="center">Verificación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="img11" src="img/11.jpeg" /></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="center">Verificación de puertos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="img12" src="img/11.jpeg" /></td>
+</tr>
+</tbody>
+</table>
+<h3 id="configura-los-virtualhosts-predeterminados">Configura los VirtualHosts predeterminados<a class="headerlink" href="#configura-los-virtualhosts-predeterminados" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th align="center">Remplazado en 000-default.conf</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="img12" src="img/12.jpeg" /></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="center">Remplazado en default-ssl.conf</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="img13" src="img/13.jpeg" /></td>
+</tr>
+</tbody>
+</table>
+<p>Se aplica el siguiente comando</p>
+<pre><code class="language-bash">grep 'DocumentRoot' /etc/apache2/sites-enabled/*.conf
+</code></pre>
+<p>Revisa cual es la ruta de la raíz del sitio web en los VirtualHost predeterminados</p>
+<table>
+<thead>
+<tr>
+<th align="center">Revisión</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="img14" src="img/14.jpeg" /></td>
+</tr>
+</tbody>
+</table>
+<h3 id="tramita-el-certificado-ssl-con-lets-encrypt">Tramita el certificado SSL con Let's Encrypt<a class="headerlink" href="#tramita-el-certificado-ssl-con-lets-encrypt" title="Permanent link">#</a></h3>
+<p>Se instala certbot en el equipo</p>
+<pre><code class="language-bash">apt -qy install certbot python3-certbot-apache
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center">Instalado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="img15" src="img/15.jpeg" /></td>
+</tr>
+</tbody>
+</table>
+<p>Ejecuta certbot en el equipo para generar el certificado SSL con Let's Encrypt</p>
+<pre><code class="language-bash">certbot --authenticator manual --installer apache --domain 'example.com' --domain '*.example.com'
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center">Salida</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="img16" src="img/16.jpeg" /></td>
+</tr>
+</tbody>
+</table>
+<h3 id="valida-el-servidor-y-dominio-dns-con-acme">Valida el servidor y dominio DNS con ACME<a class="headerlink" href="#valida-el-servidor-y-dominio-dns-con-acme" title="Permanent link">#</a></h3>
+<h3 id="redirige-el-trafico-http-a-https">Redirige el tráfico HTTP a HTTPS<a class="headerlink" href="#redirige-el-trafico-http-a-https" title="Permanent link">#</a></h3></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>CC-BY-SA-4.0</p>
+            <p>Documentación construida con <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../js/extra.js" defer></script>
+
+        <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Atajos de teclado</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Teclas</th>
+                    <th>Acción</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Abrir esta ayuda</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Página siguiente</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Página anterior</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Buscar</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
